@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="Case.asmx.cs" Class="soa_assign_3.Case" %>
