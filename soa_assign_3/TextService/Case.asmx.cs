@@ -4,10 +4,8 @@
 
 namespace soa_assign_3
 {
-    using System.Web.Services;
-    using System.Web.Services.Protocols;
-    using System.Xml;
     using System.Configuration;
+    using System.Web.Services;
 
     /// <summary>
     /// Summary description for Service1
@@ -17,6 +15,9 @@ namespace soa_assign_3
     [System.ComponentModel.ToolboxItem(false)]
     public class Case : System.Web.Services.WebService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Case" /> class.
+        /// </summary>
         public Case()
         {
             this.Factory = new ExceptionFactory(
@@ -31,6 +32,14 @@ namespace soa_assign_3
         /// </value>
         private ExceptionFactory Factory { get; set; }
 
+        /// <summary>
+        /// Converts a string's case.
+        /// </summary>
+        /// <param name="incoming">The incoming.</param>
+        /// <param name="flag">The flag.</param>
+        /// <returns>
+        ///   Upper case if the flag is 1, lower case if the flag is 0.
+        /// </returns>
         [WebMethod]
         public string CaseConvert(string incoming, int flag)
         {
