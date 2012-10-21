@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.Services;
-using System.Web.Services.Protocols;
+﻿/// Case.asmx.cs
+/// Thomas Kempton & Samuel Lewis 2012
+///
 
 namespace soa_assign_3
 {
+    using System.Web.Services;
+    using System.Web.Services.Protocols;
+    using System.Xml;
+
     /// <summary>
     /// Summary description for Service1
     /// </summary>
@@ -14,18 +16,19 @@ namespace soa_assign_3
     [System.ComponentModel.ToolboxItem(false)]
     public class Case : System.Web.Services.WebService
     {
-
         [WebMethod]
         public string CaseConvert(string incoming, int flag)
         {
             if(string.IsNullOrEmpty(incoming))
             {
                 //TODO make real soap fault
+                Logger.LogError("C:\\temp\\log.txt", "TextService.Case", "No String Provided.");
                 throw new SoapException("No string provided",
                             SoapException.ServerFaultCode,
-                            Context.Request.Url.AbsoluteUri, null, null);
+                            Context.Request.Url.AbsoluteUri,
+                            null,
+                            null);
             }
-
 
             if (flag == 1)
             {

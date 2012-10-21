@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ClientConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Services>
+    <Service Name="Case">
+      <Description>Provides Case Functions.</Description>
+      <ServiceUrl>http://localhost:49834/TextService/case.asmx</ServiceUrl>
+      <NamespaceUrl>localhost/TextService</NamespaceUrl>
+      <Methods>
+        <Method Name="CaseConvert">
+          <Description>Changes the case.</Description>
+          <Parameters>
+            <Parameter Name="incoming" Type="string" />
+            <Parameter Name="flag" Type="int" />
+          </Parameters>
+        </Method>
+      </Methods>
+    </Service>
+  </Services>
+</ClientConfig>

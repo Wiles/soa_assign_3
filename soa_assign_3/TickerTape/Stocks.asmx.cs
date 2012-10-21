@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.Services;
+﻿/// Stocks.asmx.cs
+/// Thomas Kempton & Samuel Lewis 2012
+///
 
 namespace soa_assign_3
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Web;
+    using System.Web.Services;
+
     /// <summary>
     /// Summary description for TickerTape
     /// </summary>

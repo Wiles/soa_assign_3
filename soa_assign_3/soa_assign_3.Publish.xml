@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="http://localhost" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="SOA Assignment 3" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/soa_assign_3.pdb" publishTime="10/20/2012 20:21:47" />
+    <file relUrl="bin/soa_assign_3.pdb" publishTime="10/20/2012 21:03:33" />
     <file relUrl="VinniesLoanService/Loan.asmx" publishTime="10/20/2012 20:09:05" />
-    <file relUrl="Web.config" publishTime="10/20/2012 20:13:17" />
+    <file relUrl="Web.config" publishTime="10/20/2012 21:03:53" />
     <file relUrl="TickerTape/Stocks.asmx" publishTime="10/20/2012 20:09:05" />
-    <file relUrl="bin/soa_assign_3.dll" publishTime="10/20/2012 20:21:47" />
+    <file relUrl="bin/soa_assign_3.dll" publishTime="10/20/2012 21:03:33" />
     <file relUrl="TextService/Case.asmx" publishTime="10/20/2012 20:09:05" />
   </publishProfile>
 </publishData>

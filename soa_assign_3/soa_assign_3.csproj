@@ -54,6 +54,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger.cs" />
     <Compile Include="TextService\Case.asmx.cs">
       <DependentUpon>Case.asmx</DependentUpon>
       <SubType>Component</SubType>

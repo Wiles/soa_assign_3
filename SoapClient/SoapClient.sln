@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapClient", "SoapClient\SoapClient.csproj", "{54CBBAEA-34FB-4917-80DC-B695B9D09AEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54CBBAEA-34FB-4917-80DC-B695B9D09AEE}.Debug|x86.ActiveCfg = Debug|x86
+		{54CBBAEA-34FB-4917-80DC-B695B9D09AEE}.Debug|x86.Build.0 = Debug|x86
+		{54CBBAEA-34FB-4917-80DC-B695B9D09AEE}.Release|x86.ActiveCfg = Release|x86
+		{54CBBAEA-34FB-4917-80DC-B695B9D09AEE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
