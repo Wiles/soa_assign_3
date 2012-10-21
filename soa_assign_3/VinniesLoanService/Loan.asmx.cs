@@ -9,7 +9,7 @@ namespace soa_assign_3
     using System.Web.Services;
 
     /// <summary>
-    /// Summary description for VinniesLoanService
+    /// Service class for providing information for Vinnies Loan Service
     /// </summary>
     [WebService(Namespace = "localhost/VinniesLoanService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]

@@ -8,7 +8,7 @@ namespace soa_assign_3
     using System.Web.Services;
 
     /// <summary>
-    /// Summary description for Service1
+    /// Service class for providing text manipulation methods.
     /// </summary>
     [WebService(Namespace = "localhost/TextService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]

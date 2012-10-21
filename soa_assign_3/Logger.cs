@@ -5,12 +5,16 @@
 namespace soa_assign_3
 {
     using System;
-    using System.Collections.Generic;
-    using System.Web;
     using System.IO;
 
+    /// <summary>
+    /// Static class for logging to a text file.
+    /// </summary>
     public static class Logger
     {
+        /// <summary>
+        /// The type of log.
+        /// </summary>
         public enum LogType
         {
             Message,
@@ -72,6 +76,11 @@ namespace soa_assign_3
             Log(filePath, LogType.Error, module, message);
         }
 
+        /// <summary>
+        /// Converts the enum log type value into a string.
+        /// </summary>
+        /// <param name="type">The log type.</param>
+        /// <returns>The string representation of the enum value.</returns>
         private static string ConvertType(LogType type)
         {
             switch(type)

@@ -5,11 +5,12 @@
 namespace soa_assign_3
 {
     using System;
-    using System.Collections.Generic;
-    using System.Web;
     using System.Web.Services.Protocols;
     using System.Xml;
 
+    /// <summary>
+    /// Class for creating SOAP exceptions.
+    /// </summary>
     public class ExceptionFactory
     {
         /// <summary>

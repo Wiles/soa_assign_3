@@ -5,13 +5,11 @@
 namespace soa_assign_3
 {
     using System.Configuration;
-    using System.IO;
-    using System.Text;
     using System.Web.Services;
     using System.Xml;
 
     /// <summary>
-    /// Summary description for TickerTape
+    /// Service class for providing stock information.
     /// </summary>
     [WebService(Namespace = "localhost/TickerTape")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -19,7 +17,7 @@ namespace soa_assign_3
     public class Stocks : System.Web.Services.WebService
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Loan" /> class.
+        /// Initializes a new instance of the <see cref="Stocks" /> class.
         /// </summary>
         public Stocks()
         {
@@ -46,6 +44,11 @@ namespace soa_assign_3
             public string LastPriceTime;
         }
 
+        /// <summary>
+        /// Gets the stock quote.
+        /// </summary>
+        /// <param name="tickerSymbol">The ticker symbol.</param>
+        /// <returns>The stock quote information.</returns>
         [WebMethod]
         public QuoteInfo GetQuote(string tickerSymbol)
         {
