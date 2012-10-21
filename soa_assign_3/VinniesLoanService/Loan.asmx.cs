@@ -35,12 +35,12 @@ namespace soa_assign_3
         private ExceptionFactory Factory { get; set; }
 
         /// <summary>
-        /// Calculates a monthly loan payment amount.
+        /// Calculates a monthly loan payment.
         /// </summary>
         /// <param name="principleAmount">The principle amount.</param>
         /// <param name="interestRate">The interest rate.</param>
         /// <param name="numPayments">The num payments.</param>
-        /// <returns>The monthly payment amount.</returns>
+        /// <returns>The monthly payment.</returns>
         [WebMethod]
         public float LoanPayment(float principleAmount, float interestRate, int numPayments)
         {
@@ -69,7 +69,7 @@ namespace soa_assign_3
             }
 
             double rate = interestRate / 12;
-            return (float)(rate + (rate / (Math.Pow(1.0f + rate, numPayments) - 1))) * principleAmount;
+            return (float)Math.Round((rate + (rate / (Math.Pow(1.0f + rate, numPayments) - 1))) * principleAmount, 2);
         }
     }
 }
