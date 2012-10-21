@@ -46,7 +46,7 @@ namespace soa_assign_3
             if(string.IsNullOrEmpty(incoming))
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "No string provided.",
                         "Parameter incoming cannot be null or empty.");
             }
@@ -62,7 +62,7 @@ namespace soa_assign_3
             else
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "Unknown flag value.",
                         "The flag may only be 1 or 2.");
             }

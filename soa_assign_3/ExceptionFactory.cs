@@ -41,11 +41,11 @@ namespace soa_assign_3
         /// <param name="message">The message.</param>
         /// <param name="details">The details.</param>
         /// <returns>The SOAP exception.</returns>
-        public SoapException Create(string actor, string message, string details)
+        public SoapException Create(Uri uri, string message, string details)
         {
             Logger.LogError(
                     this.LogPath,
-                    actor,
+                    uri.AbsolutePath,
                     message);
 
             var doc = new XmlDocument();
@@ -55,7 +55,7 @@ namespace soa_assign_3
             return new SoapException(
                     message,
                     SoapException.ServerFaultCode,
-                    actor,
+                    uri.AbsoluteUri,
                     doc,
                     null);
         }

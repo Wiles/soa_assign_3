@@ -44,7 +44,6 @@ namespace soa_assign_3
             public double LastPrice;
             public string LastPriceDate;
             public string LastPriceTime;
-
         }
 
         [WebMethod]
@@ -53,7 +52,7 @@ namespace soa_assign_3
             if (string.IsNullOrEmpty(tickerSymbol))
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "No string provided.",
                         "Parameter tickerSymbol cannot be null or empty.");
             }
@@ -66,7 +65,7 @@ namespace soa_assign_3
                 if (response == "exception")
                 {
                     throw this.Factory.Create(
-                            Context.Request.Url.AbsoluteUri,
+                            Context.Request.Url,
                             "Invalid ticker symbol provided.",
                             "The provided ticker symbol could not be found.");
                 }
@@ -86,7 +85,7 @@ namespace soa_assign_3
             catch
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "Internal Exception.",
                         "A fatal exception occured while retrieving the results.");
             }

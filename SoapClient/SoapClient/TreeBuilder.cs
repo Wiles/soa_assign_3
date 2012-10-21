@@ -21,11 +21,7 @@ namespace SoapClient
         public static TreeNode BuildTreeView(string soap)
         {
             var xml = new XmlDocument();
-            var bytes = Encoding.ASCII.GetBytes(soap);
-            using (var mem = new MemoryStream(bytes))
-            {
-                xml.Load(mem);
-            }
+            xml.LoadXml(soap);
 
             var tree = new TreeNode("Response");
             var envelope = xml.LastChild.LastChild;

@@ -15,5 +15,33 @@
         </Method>
       </Methods>
     </Service>
+    <Service Name="Loan">
+      <Description>Provides Case Functions.</Description>
+      <ServiceUrl>http://localhost:49834/VinniesLoanService/Loan.asmx</ServiceUrl>
+      <NamespaceUrl>localhost/VinniesLoanService</NamespaceUrl>
+      <Methods>
+        <Method Name="LoanPayment">
+          <Description>Calculates a monthly loan payment.</Description>
+          <Parameters>
+            <Parameter Name="principleAmount" Type="float" />
+            <Parameter Name="interestRate" Type="float" />
+            <Parameter Name="numPayments" Type="float" />
+          </Parameters>
+        </Method>
+      </Methods>
+    </Service>
+    <Service Name="Stocks">
+      <Description>Provides Case Functions.</Description>
+      <ServiceUrl>http://localhost:49834/TickerTape/Stocks.asmx</ServiceUrl>
+      <NamespaceUrl>localhost/TickerTape</NamespaceUrl>
+      <Methods>
+        <Method Name="GetQuote">
+          <Description>Gets a stock quote.</Description>
+          <Parameters>
+            <Parameter Name="tickerSymbol" Type="string" />
+          </Parameters>
+        </Method>
+      </Methods>
+    </Service>
   </Services>
 </ClientConfig>

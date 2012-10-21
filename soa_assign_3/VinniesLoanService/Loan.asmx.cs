@@ -47,7 +47,7 @@ namespace soa_assign_3
             if (principleAmount <= 0)
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "Invalid principle amount.",
                         "The principle amount must be greater than zero.");
             }
@@ -55,7 +55,7 @@ namespace soa_assign_3
             if (interestRate <= 0)
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "Invalid interest rate.",
                         "The interest rate must be greater than zero.");
             }
@@ -63,7 +63,7 @@ namespace soa_assign_3
             if (numPayments <= 0)
             {
                 throw this.Factory.Create(
-                        Context.Request.Url.AbsoluteUri,
+                        Context.Request.Url,
                         "Invalid number of payments.",
                         "The number of payments must be greater than zero.");
             }

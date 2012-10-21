@@ -221,6 +221,19 @@ namespace SoapClient
                     }
                     break;
 
+                case "float":
+                    try
+                    {
+                        float.Parse(parameter.Value);
+                    }
+                    catch
+                    {
+                        return string.Format(
+                                "{0} must be a float",
+                                parameter.Parameter);
+                    }
+                    break;
+
                 case "string":
                 default:
                     //if (string.IsNullOrEmpty(parameter.Value))
@@ -276,6 +289,7 @@ namespace SoapClient
             this.btnSend.Enabled = false;
             txtResponse.Text = string.Empty;
             treeResponse.Nodes.Clear();
+            this.Parameters.Clear();
         }
 
         /// <summary>
